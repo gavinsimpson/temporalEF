@@ -1,0 +1,33 @@
+\name{makeLinks}
+\alias{makeLinks}
+\title{Build an asymmetric link matrix}
+\usage{
+  makeLinks(tp, link0 = TRUE, dimnames = TRUE)
+}
+\arguments{
+  \item{tp}{numeric vector of sorted time points}
+
+  \item{link0}{logical; should the link from t[0] be
+  included?}
+
+  \item{dimnames}{logical; should dimnames be attached to
+  the link matrix?}
+}
+\value{
+  binary matrix of links between time points. The object is
+  a square asymmetric matrix with \code{length(tp)} rows
+  and columns. Rows represent the \code{tp} time points,
+  and columns are the network links between timepoints.
+}
+\description{
+  Build an asymmetric link matrix
+}
+\examples{
+tp <- seq_len(10)
+makeLinks(tp)
+}
+\seealso{
+  \code{\link{makeWeights}} for a matching weight matrix.
+}
+\keyword{utilities}
+

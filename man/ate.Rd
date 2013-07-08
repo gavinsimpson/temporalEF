@@ -1,0 +1,61 @@
+\name{ate}
+\alias{ate}
+\alias{ate.default}
+\alias{eigenvals.ate}
+\alias{print.ate}
+\alias{scores.ate}
+\title{Generate a set of asymmetric temporal eigenfunctions}
+\usage{
+  ate(x, ...)
+
+  \method{ate}{default} (x, N, weight = FALSE, FUN = NULL,
+    link0 = TRUE, ...)
+
+  \method{print}{ate} (x, digits = 3, ...)
+
+  \method{scores}{ate} (x, choices, ...)
+
+  \method{eigenvals}{ate} (x, ...)
+}
+\arguments{
+  \item{x}{an R object. For \code{ate} currently only a
+  sorted vector of time points. For the \code{print} method
+  an object of class \code{"ate"}.}
+
+  \item{N}{numeric; the number of eigenvectors to return.
+  If not supplied, N is taken from the appropriate
+  dimension of \code{x}; for the default method, this is
+  the length of \code{x}.}
+
+  \item{weight}{logical; should a weighting matrix be
+  generated and applied to the link matrix?}
+
+  \item{FUN}{a function to be applied to the weighting
+  matrix. Ignored if \code{weight} is \code{FALSE}.}
+
+  \item{link0}{logical; should the link from t[0] be
+  included?}
+
+  \item{...}{additional arguments passed to \code{FUN}.}
+
+  \item{digits}{numeric; number of digits to display in
+  output.}
+
+  \item{choices}{numeric; vector indicating which
+  eigenfunctions to return.}
+}
+\description{
+  The asymmetric eigenvector map (AEM) is a recently
+  proposed method for describing orthongonal spatial
+  functions for use in multivariate ordination. AEMs are
+  asymmetric because they apply a directionality to the
+  spatial dependencies modelled by the eigenfunctions.
+  Asymmetric temporal eigenfunctions (ATEs) implement the
+  AEM idea to model patterns of temporal dependence; i.e. a
+  single spatial dimension.
+}
+\examples{
+tp <- seq_len(10)
+ate(tp)
+}
+

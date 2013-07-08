@@ -1,0 +1,24 @@
+Package: temporalEF
+Type: Package
+Title: Temporal Eigenfunctions
+Version: 0.1-0
+Date: 2012-10-17
+Depends:
+    R (>= 2.10.0)
+Imports:
+    vegan
+Author: Gavin L. Simpson
+Maintainer: Gavin L. Simpson <gavin.simpson@ucl.ac.uk>
+Description: Build sets of (asymmetric) one-dimensional, temporal
+    eigenfunctions. The set of eigenfunctions are orthogonal patterns of
+    temporal variation at a range of scales. Two types of temporal
+    eigenfunctions are implemented; i) asymmetric temporal eigenfunctions
+    (ATEs), based on the Asymmetric Eigenvector Map (AEM) method of Blanchet et
+    al (2008), and ii) principal coordinates of temporal neighbour matrices
+    (PCTNs), based on the concept of principal coordinates of neighboour
+    matrices.
+License: GPL-2
+Collate:
+    'ate.R'
+    'pctn.R'
+    'utilities.R'

@@ -1,0 +1,9 @@
+analogue Change Log
+
+Version 0.1 - 17 October 2012
+
+	* Adds code to remove the link at time t[0]
+
+Version 0.0-1 - 6 August 2011
+
+	* First collection of code into a package.
