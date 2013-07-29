@@ -1,5 +1,11 @@
 analogue Change Log
 
+Version 0.1-2
+
+	* timelag; a simple (currently) implementation of time lag
+	analysis. Comes with a `plot` method. Currently only `"dist"`
+	classed objects are handled.
+
 Version 0.1 - 17 October 2012
 
 	* Adds code to remove the link at time t[0]

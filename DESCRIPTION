@@ -7,6 +7,8 @@ Depends:
     R (>= 2.10.0)
 Imports:
     vegan
+Suggests:
+    analogue
 Author: Gavin L. Simpson
 Maintainer: Gavin L. Simpson <gavin.simpson@ucl.ac.uk>
 Description: Build sets of (asymmetric) one-dimensional, temporal
@@ -22,3 +24,4 @@ Collate:
     'ate.R'
     'pctn.R'
     'utilities.R'
+    'timelag.R'

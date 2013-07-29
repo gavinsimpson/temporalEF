@@ -1,0 +1,42 @@
+\name{plot.timelagAnalysis}
+\alias{plot.timelagAnalysis}
+\title{A time lag analysis plot.}
+\usage{
+  \method{plot}{timelagAnalysis} (x, ...)
+}
+\arguments{
+  \item{x}{an object of class \code{"timelagAnalysis"}, the
+  result of a call to \code{\link{timelag}}.}
+
+  \item{...}{additional arguments passed to
+  \code{\link{plot}}.}
+}
+\value{
+  Invisibly returns its input \code{x}.
+}
+\description{
+  A plot of \eqn{\sqrt{\mathrm{lag}}}{sqrt(lag)} against
+  compositional dissimilarity.
+}
+\details{
+  TODO - smoothers etc.
+}
+\examples{
+## load analogue for Abernethy data set & distance()
+require("analogue")
+
+## Load Abernethy Forest data set
+data("abernethy", package = "analogue")
+## Load Abernethy Forest data set
+
+## Remove the Depth and Age variables
+abernethy2 <- abernethy[, -(37:38)]
+
+## time lag analysis
+tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
+plot(tla, pch = 19)
+}
+\author{
+  Gavin L. Simpson
+}
+
