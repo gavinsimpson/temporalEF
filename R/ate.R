@@ -115,7 +115,7 @@
     out
 }
 
-##' Plot asymmetric temporal eigenfunctions
+##' @title Plot asymmetric temporal eigenfunctions
 ##'
 ##' @param x an object of class \code{"ate"}
 ##' @param pages numeric; the number of pages over which to spread
