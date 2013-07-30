@@ -1,0 +1,275 @@
+
+R version 3.0.1 RC (2013-05-11 r62732) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-unknown-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "temporalEF"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> library('temporalEF')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("ate")
+> ### * ate
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: ate
+> ### Title: Asymmetric temporal eigenfunctions
+> ### Aliases: ate ate.default eigenvals.ate print.ate scores.ate
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(10)
+> ate(tp)
+
+Asymmetric Temporal Eigenfunctions
+
+No. of Eigenfunctions: 9
+Eigenvalues:
+   EF1    EF2    EF3    EF4    EF5    EF6    EF7    EF8    EF9 
+1.0216 0.2618 0.1213 0.0724 0.0500 0.0382 0.0315 0.0276 0.0256 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("makeLinks")
+> ### * makeLinks
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: makeLinks
+> ### Title: Build an asymmetric link matrix
+> ### Aliases: makeLinks
+> ### Keywords: utilities
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(10)
+> makeLinks(tp)
+    l0 l1 l2 l3 l4 l5 l6 l7 l8 l9
+t1   1  0  0  0  0  0  0  0  0  0
+t2   1  1  0  0  0  0  0  0  0  0
+t3   1  1  1  0  0  0  0  0  0  0
+t4   1  1  1  1  0  0  0  0  0  0
+t5   1  1  1  1  1  0  0  0  0  0
+t6   1  1  1  1  1  1  0  0  0  0
+t7   1  1  1  1  1  1  1  0  0  0
+t8   1  1  1  1  1  1  1  1  0  0
+t9   1  1  1  1  1  1  1  1  1  0
+t10  1  1  1  1  1  1  1  1  1  1
+attr(,"class")
+[1] "linkMatrix" "matrix"    
+> 
+> 
+> 
+> cleanEx()
+> nameEx("makeWeights")
+> ### * makeWeights
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: makeWeights
+> ### Title: Build a temporal weighting matrix
+> ### Aliases: makeWeights
+> ### Keywords: utilities
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(10)
+> makeWeights(tp)
+    l0 l1 l2 l3 l4 l5 l6 l7 l8 l9
+t1   1  0  0  0  0  0  0  0  0  0
+t2   2  1  0  0  0  0  0  0  0  0
+t3   3  2  1  0  0  0  0  0  0  0
+t4   4  3  2  1  0  0  0  0  0  0
+t5   5  4  3  2  1  0  0  0  0  0
+t6   6  5  4  3  2  1  0  0  0  0
+t7   7  6  5  4  3  2  1  0  0  0
+t8   8  7  6  5  4  3  2  1  0  0
+t9   9  8  7  6  5  4  3  2  1  0
+t10 10  9  8  7  6  5  4  3  2  1
+attr(,"class")
+[1] "weightMatrix" "matrix"      
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pctn")
+> ### * pctn
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pctn
+> ### Title: Principal coordinates of temporal neighbours
+> ### Aliases: eigenvals.pctn pctn pctn.default print.pctn scores.pctn
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(50)
+> mod <- pctn(tp)
+> mod
+
+Principal Coordinates of Temporal Neighbours
+
+No. of Eigenfunctions: 33
+Eigenvalues:
+  EF1   EF2   EF3   EF4   EF5   EF6   EF7   EF8   EF9  EF10  EF11  EF12  EF13 
+22.89 22.77 22.55 22.32 21.99 21.65 21.22 20.77 20.24 19.71 19.09 18.46 17.76 
+ EF14  EF15  EF16  EF17  EF18  EF19  EF20  EF21  EF22  EF23  EF24  EF25  EF26 
+17.06 16.29 15.52 14.69 13.86 12.99 12.12 11.21 10.31  9.38  8.47  7.54  6.63 
+ EF27  EF28  EF29  EF30  EF31  EF32  EF33 
+ 5.70  4.80  3.90  3.02  2.15  1.32  0.50 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.ate")
+> ### * plot.ate
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.ate
+> ### Title: Plot asymmetric temporal eigenfunctions
+> ### Aliases: plot.ate
+> ### Keywords: hplot
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(50)
+> mod <- ate(tp)
+> plot(mod, pages = 2)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.pctn")
+> ### * plot.pctn
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.pctn
+> ### Title: Plot PCTN eigenfunctions
+> ### Aliases: plot.pctn
+> ### Keywords: hplot
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(50)
+> mod <- pctn(tp)
+> plot(mod, pages = 2)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.timelagAnalysis")
+> ### * plot.timelagAnalysis
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.timelagAnalysis
+> ### Title: A time lag analysis plot.
+> ### Aliases: plot.timelagAnalysis
+> 
+> ### ** Examples
+> 
+> ## load analogue for Abernethy data set & distance()
+> require("analogue")
+Loading required package: analogue
+Loading required package: vegan
+Loading required package: permute
+This is vegan 2.1-29
+Loading required package: princurve
+Loading required package: lattice
+Loading required package: rgl
+This is analogue 0.11-4
+> 
+> ## Load Abernethy Forest data set
+> data("abernethy", package = "analogue")
+> ## Load Abernethy Forest data set
+> 
+> ## Remove the Depth and Age variables
+> abernethy2 <- abernethy[, -(37:38)]
+> 
+> ## time lag analysis
+> tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
+> plot(tla, pch = 19)
+> 
+> 
+> 
+> cleanEx()
+
+detaching ‘package:analogue’, ‘package:rgl’, ‘package:lattice’,
+  ‘package:princurve’, ‘package:vegan’, ‘package:permute’
+
+> nameEx("timelag")
+> ### * timelag
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: timelag
+> ### Title: Time lag analysis
+> ### Aliases: timelag timelag.dist
+> 
+> ### ** Examples
+> 
+> ## load analogue for Abernethy data set & distance()
+> require("analogue")
+Loading required package: analogue
+Loading required package: vegan
+Loading required package: permute
+This is vegan 2.1-29
+Loading required package: princurve
+Loading required package: lattice
+Loading required package: rgl
+This is analogue 0.11-4
+> 
+> ## Load Abernethy Forest data set
+> data("abernethy", package = "analogue")
+> ## Load Abernethy Forest data set
+> 
+> ## Remove the Depth and Age variables
+> abernethy2 <- abernethy[, -(37:38)]
+> 
+> ## time lag analysis
+> tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
+> head(tla[[1]])
+  Lag Distance
+1   1 2.439201
+2   1 2.230325
+3   1 2.742423
+4   1 2.450239
+5   1 1.508551
+6   1 1.542189
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  3.952 0.071 4.144 0.001 0.002 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
