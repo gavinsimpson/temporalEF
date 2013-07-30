@@ -4,7 +4,7 @@
 \alias{eigenvals.ate}
 \alias{print.ate}
 \alias{scores.ate}
-\title{Generate a set of asymmetric temporal eigenfunctions}
+\title{Asymmetric temporal eigenfunctions}
 \usage{
   ate(x, ...)
 
@@ -45,6 +45,9 @@
   eigenfunctions to return.}
 }
 \description{
+  Generate a set of asymmetric temporal eigenfunctions
+}
+\details{
   The asymmetric eigenvector map (AEM) is a recently
   proposed method for describing orthongonal spatial
   functions for use in multivariate ordination. AEMs are

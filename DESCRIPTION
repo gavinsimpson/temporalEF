@@ -1,7 +1,7 @@
 Package: temporalEF
 Type: Package
 Title: Temporal Eigenfunctions
-Version: 0.1-0
+Version: 0.1-2
 Date: 2012-10-17
 Depends:
     R (>= 2.10.0)
@@ -25,3 +25,4 @@ Collate:
     'pctn.R'
     'utilities.R'
     'timelag.R'
+    'tef.R'

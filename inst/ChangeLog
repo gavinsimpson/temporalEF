@@ -6,6 +6,9 @@ Version 0.1-2
 	analysis. Comes with a `plot` method. Currently only `"dist"`
 	classed objects are handled.
 
+	* tef; new high-level function for fitting constrained
+	ordinations with temporal eigenfunctions as constraints.
+
 Version 0.1 - 17 October 2012
 
 	* Adds code to remove the link at time t[0]

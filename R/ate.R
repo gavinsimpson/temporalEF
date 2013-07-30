@@ -1,12 +1,14 @@
-##' Generate a set of asymmetric temporal eigenfunctions
+##' @title Asymmetric temporal eigenfunctions
 ##'
-##' The asymmetric eigenvector map (AEM) is a recently proposed method
-##' for describing orthongonal spatial functions for use in multivariate
-##' ordination. AEMs are asymmetric because they apply a directionality
-##' to the spatial dependencies modelled by the eigenfunctions.
-##' Asymmetric temporal eigenfunctions (ATEs) implement the AEM idea to
-##' model patterns of temporal dependence; i.e. a single spatial
-##' dimension.
+##' @description Generate a set of asymmetric temporal eigenfunctions
+##'
+##' @details The asymmetric eigenvector map (AEM) is a recently proposed
+##' method for describing orthongonal spatial functions for use in
+##' multivariate ordination. AEMs are asymmetric because they apply a
+##' directionality to the spatial dependencies modelled by the
+##' eigenfunctions. Asymmetric temporal eigenfunctions (ATEs) implement
+##' the AEM idea to model patterns of temporal dependence; i.e. a single
+##' spatial dimension.
 ##'
 ##' @rdname ate
 ##'
