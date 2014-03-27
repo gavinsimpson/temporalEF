@@ -25,6 +25,6 @@ A plot on the current device
 A plot of Moran's I versus time.
 }
 \author{
-Gavin
+Gavin L. Simpson
 }
 

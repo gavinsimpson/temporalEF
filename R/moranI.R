@@ -138,8 +138,13 @@
 ##' @param xlab the label for the x-axis of the plot.
 ##' @param ylab the label for the y-axis of the plot.
 ##' @param ... additional arguments passed to \code{\link{plot}}.
+##'
 ##' @return A plot on the current device
-##' @author Gavin
+##'
+##' @author Gavin L. Simpson
+##'
+##' @S3method plot moranI
+##' @method plot moranI
 `plot.moranI` <- function(x, type = "b", xlab = "Eigenfunctions",
                           ylab = "Moran's I", ...) {
     statistic <- x$statistic[,1]
