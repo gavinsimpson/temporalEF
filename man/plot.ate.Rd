@@ -2,8 +2,8 @@
 \alias{plot.ate}
 \title{Plot asymmetric temporal eigenfunctions}
 \usage{
-  \method{plot}{ate} (x, pages = 1, ylim, ylab = nams,
-    xlab = "", ask = FALSE, ...)
+\method{plot}{ate}(x, pages = 1, ylim, ylab = nams, xlab = "",
+  ask = FALSE, ...)
 }
 \arguments{
   \item{x}{an object of class \code{"ate"}}
@@ -22,10 +22,10 @@
   \code{\link{plot}}}
 }
 \value{
-  A plot on the currently active device
+A plot on the currently active device
 }
 \description{
-  Plot asymmetric temporal eigenfunctions
+Plot asymmetric temporal eigenfunctions
 }
 \examples{
 tp <- seq_len(50)
@@ -33,7 +33,7 @@ mod <- ate(tp)
 plot(mod, pages = 2)
 }
 \seealso{
-  \code{\link{ate}} for creating ATE objects
+\code{\link{ate}} for creating ATE objects
 }
 \keyword{hplot}
 

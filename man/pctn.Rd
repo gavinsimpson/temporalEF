@@ -6,16 +6,15 @@
 \alias{scores.pctn}
 \title{Principal coordinates of temporal neighbours}
 \usage{
-  pctn(x, ...)
+pctn(x, ...)
 
-  \method{pctn}{default} (x, threshold, distfun = dist,
-    ...)
+\method{pctn}{default}(x, threshold, distfun = dist, ...)
 
-  \method{print}{pctn} (x, digits = 3, ...)
+\method{print}{pctn}(x, digits = 3, ...)
 
-  \method{scores}{pctn} (x, choices, ...)
+\method{scores}{pctn}(x, choices, ...)
 
-  \method{eigenvals}{pctn} (x, ...)
+\method{eigenvals}{pctn}(x, ...)
 }
 \arguments{
   \item{x}{an R object. For \code{pctn} currently only a
@@ -44,18 +43,18 @@
   eigenfunctions to return.}
 }
 \description{
-  Computes the classic PCNM by the principal coordinate
-  analysis of a truncated distance matrix, but for a
-  one-dimensional process.
+Computes the classic PCNM by the principal coordinate
+analysis of a truncated distance matrix, but for a
+one-dimensional process.
 }
 \details{
-  The default distance coefficient used to compute temporal
-  separation is the Euclidean distance. If you want to use
-  a different coefficient, you can supply a suitable
-  function to argument \code{distfun}. This should be a
-  function that returns an object of class \code{"dist"} or
-  a square symmetric matrix that can be coerced to one.
-  Arguments can be passed to \code{distfun} via \ldots.
+The default distance coefficient used to compute temporal
+separation is the Euclidean distance. If you want to use a
+different coefficient, you can supply a suitable function
+to argument \code{distfun}. This should be a function that
+returns an object of class \code{"dist"} or a square
+symmetric matrix that can be coerced to one. Arguments can
+be passed to \code{distfun} via \ldots.
 }
 \examples{
 tp <- seq_len(50)

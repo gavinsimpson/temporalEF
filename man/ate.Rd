@@ -6,16 +6,15 @@
 \alias{scores.ate}
 \title{Asymmetric temporal eigenfunctions}
 \usage{
-  ate(x, ...)
+ate(x, ...)
 
-  \method{ate}{default} (x, N, weight = FALSE, FUN = NULL,
-    link0 = TRUE, ...)
+\method{ate}{default}(x, N, weight = FALSE, FUN = NULL, link0 = TRUE, ...)
 
-  \method{print}{ate} (x, digits = 3, ...)
+\method{print}{ate}(x, digits = 3, ...)
 
-  \method{scores}{ate} (x, choices, ...)
+\method{scores}{ate}(x, choices, ...)
 
-  \method{eigenvals}{ate} (x, ...)
+\method{eigenvals}{ate}(x, ...)
 }
 \arguments{
   \item{x}{an R object. For \code{ate} currently only a
@@ -45,17 +44,17 @@
   eigenfunctions to return.}
 }
 \description{
-  Generate a set of asymmetric temporal eigenfunctions
+Generate a set of asymmetric temporal eigenfunctions
 }
 \details{
-  The asymmetric eigenvector map (AEM) is a recently
-  proposed method for describing orthongonal spatial
-  functions for use in multivariate ordination. AEMs are
-  asymmetric because they apply a directionality to the
-  spatial dependencies modelled by the eigenfunctions.
-  Asymmetric temporal eigenfunctions (ATEs) implement the
-  AEM idea to model patterns of temporal dependence; i.e. a
-  single spatial dimension.
+The asymmetric eigenvector map (AEM) is a recently proposed
+method for describing orthongonal spatial functions for use
+in multivariate ordination. AEMs are asymmetric because
+they apply a directionality to the spatial dependencies
+modelled by the eigenfunctions. Asymmetric temporal
+eigenfunctions (ATEs) implement the AEM idea to model
+patterns of temporal dependence; i.e. a single spatial
+dimension.
 }
 \examples{
 tp <- seq_len(10)

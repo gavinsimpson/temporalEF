@@ -43,16 +43,20 @@
 ##' @S3method ate default
 `ate.default` <- function(x, N, weight = FALSE, FUN = NULL,
                           link0 = TRUE, ...) {
-    links <- lmat <- makeLinks(x, link0 = link0)
-    w <- NULL
-    if(weight) {
-        w <- makeWeights(x, FUN = FUN, ...)
-        lmat <- lmat * w
-    }
     if(missing(N))
         N <- length(x)
     if(!link0)
         N <- N-1
+    ## create the links matrix, store twice, once for links & once
+    ## for computations as latter may be weighted
+    links <- lmat <- makeLinks(x, link0 = link0)
+    if(weight) {
+        w <- makeWeightVec(x, FUN = FUN, link0 = link0, ...)
+        lmat <- lmat * w
+    } else {
+        w <- rep(1, N)
+        attr(w, "link0") <- link0
+    }
     ## centre lmat
     lmat <- sweep(lmat, 2, colMeans(lmat), "-")
     ## decomposition

@@ -2,7 +2,7 @@
 \alias{makeLinks}
 \title{Build an asymmetric link matrix}
 \usage{
-  makeLinks(tp, link0 = TRUE, dimnames = TRUE)
+makeLinks(tp, link0 = TRUE, dimnames = TRUE)
 }
 \arguments{
   \item{tp}{numeric vector of sorted time points}
@@ -14,20 +14,23 @@
   the link matrix?}
 }
 \value{
-  binary matrix of links between time points. The object is
-  a square asymmetric matrix with \code{length(tp)} rows
-  and columns. Rows represent the \code{tp} time points,
-  and columns are the network links between timepoints.
+binary matrix of links between time points. The object is a
+square asymmetric matrix with \code{length(tp)} rows and
+columns. Rows represent the \code{tp} time points, and
+columns are the network links between timepoints.
 }
 \description{
-  Build an asymmetric link matrix
+Build an asymmetric link matrix
 }
 \examples{
 tp <- seq_len(10)
 makeLinks(tp)
 }
+\author{
+Gavin L. Simpson
+}
 \seealso{
-  \code{\link{makeWeights}} for a matching weight matrix.
+\code{\link{makeWeights}} for a matching weight matrix.
 }
 \keyword{utilities}
 

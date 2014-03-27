@@ -1,8 +1,8 @@
-\name{makeWeights}
-\alias{makeWeights}
-\title{Temporal weight matrix}
+\name{makeWeightMat}
+\alias{makeWeightMat}
+\title{Diagonal weight matrix for time points}
 \usage{
-makeWeights(tp, FUN = NULL, link0 = TRUE, dimnames = TRUE, ...)
+makeWeightMat(tp, FUN = NULL, link0 = TRUE, dimnames = TRUE, ...)
 }
 \arguments{
   \item{tp}{numeric vector of sorted time points}
@@ -18,20 +18,19 @@ makeWeights(tp, FUN = NULL, link0 = TRUE, dimnames = TRUE, ...)
   \item{...}{optional arguments passed to \code{FUN}}
 }
 \value{
-a square, symmetric matrix of weights.
+a diagonal matrix of weights with dimensions
+\code{length(tp) - 1}
 }
 \description{
-Build a temporal weighting matrix
+A diagonal matrix of weights based on the inverse of time
+duration between time points.
 }
 \examples{
 tp <- seq_len(10)
-makeWeights(tp)
+makeWeightMat(tp)
 }
 \author{
 Gavin L. Simpson
-}
-\seealso{
-\code{\link{makeLinks}} for a matching link matrix
 }
 \keyword{utilities}
 

@@ -3,11 +3,10 @@
 \alias{tef.default}
 \title{Temporal eigenfunction ordination}
 \usage{
-  tef(x, ...)
+tef(x, ...)
 
-  \method{tef}{default} (x, index,
-    method = c("ate", "aem", "pctn", "pcnm"),
-    ordination = c("rda"), ...)
+\method{tef}{default}(x, index, method = c("ate", "aem", "pctn", "pcnm"),
+  ordination = c("rda"), ...)
 }
 \arguments{
   \item{x}{community data matrix or data frame}
@@ -28,21 +27,21 @@
   function.}
 }
 \value{
-  An object of class \code{"tef"}, a list with the
-  following components:
+An object of class \code{"tef"}, a list with the following
+components:
 
-  \describe{ \item{ordination}{the fitted constrained
-  ordination.} \item{tefs}{the computed set of temporal
-  eigenfunctions.} }
+\describe{ \item{ordination}{the fitted constrained
+ordination.} \item{tefs}{the computed set of temporal
+eigenfunctions.} }
 }
 \description{
-  Fits an ordination using temporal eigenfunctions as
-  constraints.
+Fits an ordination using temporal eigenfunctions as
+constraints.
 }
 \details{
-  TODO
+TODO
 }
 \author{
-  Gavin L. Simpson
+Gavin L. Simpson
 }
 

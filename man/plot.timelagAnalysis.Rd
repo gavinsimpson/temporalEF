@@ -2,7 +2,7 @@
 \alias{plot.timelagAnalysis}
 \title{A time lag analysis plot.}
 \usage{
-  \method{plot}{timelagAnalysis} (x, ...)
+\method{plot}{timelagAnalysis}(x, ...)
 }
 \arguments{
   \item{x}{an object of class \code{"timelagAnalysis"}, the
@@ -12,14 +12,14 @@
   \code{\link{plot}}.}
 }
 \value{
-  Invisibly returns its input \code{x}.
+Invisibly returns its input \code{x}.
 }
 \description{
-  A plot of \eqn{\sqrt{\mathrm{lag}}}{sqrt(lag)} against
-  compositional dissimilarity.
+A plot of \eqn{\sqrt{\mathrm{lag}}}{sqrt(lag)} against
+compositional dissimilarity.
 }
 \details{
-  TODO - smoothers etc.
+TODO - smoothers etc.
 }
 \examples{
 ## load analogue for Abernethy data set & distance()
@@ -37,6 +37,6 @@ tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
 plot(tla, pch = 19)
 }
 \author{
-  Gavin L. Simpson
+Gavin L. Simpson
 }
 

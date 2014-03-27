@@ -1,16 +1,19 @@
 Package: temporalEF
 Type: Package
 Title: Temporal Eigenfunctions
-Version: 0.1-2
+Version: 0.1-3
 Date: 2012-10-17
 Depends:
     R (>= 2.10.0)
 Imports:
-    vegan
+    vegan,
+    permute
 Suggests:
     analogue
 Author: Gavin L. Simpson
-Maintainer: Gavin L. Simpson <gavin.simpson@ucl.ac.uk>
+Authors@R: person(given = c("Gavin", "L."), family = "Simpson",
+    role = c("aut","cre"), email = "ucfagls@gmail.com")
+Maintainer: Gavin L. Simpson <ucfagls@gmail.com>
 Description: Build sets of (asymmetric) one-dimensional, temporal
     eigenfunctions. The set of eigenfunctions are orthogonal patterns of
     temporal variation at a range of scales. Two types of temporal
@@ -20,9 +23,3 @@ Description: Build sets of (asymmetric) one-dimensional, temporal
     (PCTNs), based on the concept of principal coordinates of neighboour
     matrices.
 License: GPL-2
-Collate:
-    'ate.R'
-    'pctn.R'
-    'utilities.R'
-    'timelag.R'
-    'tef.R'

@@ -1,0 +1,35 @@
+\name{makeWeightVec}
+\alias{makeWeightVec}
+\title{Weight vector for time points}
+\usage{
+makeWeightVec(tp, FUN = NULL, link0 = TRUE, names = TRUE, ...)
+}
+\arguments{
+  \item{tp}{numeric vector of sorted time points}
+
+  \item{FUN}{a function to apply}
+
+  \item{link0}{logical; should the link from t[0] be
+  included?}
+
+  \item{names}{logical; should names by attached to the
+  vector?}
+
+  \item{...}{optional arguments passed to \code{FUN}}
+}
+\value{
+a matrix of weights of length \code{length(tp) - 1}
+}
+\description{
+A vector of weights based on the inverse of time duration
+between time points.
+}
+\examples{
+tp <- seq_len(10)
+makeWeightVec(tp)
+}
+\author{
+Gavin L. Simpson
+}
+\keyword{utilities}
+
