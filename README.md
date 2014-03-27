@@ -1,5 +1,7 @@
 #temporalEF
 
+[![Build Status](https://travis-ci.org/gavinsimpson/temporalEF.svg?branch=master)](https://travis-ci.org/gavinsimpson/temporalEF)
+
 **temporalEF** is an R package that computes eigenfunctions for use in
 explaining patterns in multivariate time series. The basic idea is taken
 from recent developments in the field of spatial analysis in multivariate
