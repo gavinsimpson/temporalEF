@@ -6,17 +6,23 @@
   ylab = "Moran's I", ...)
 }
 \arguments{
-  \item{x}{an object of class \code{\link{moranI}}}
+  \item{x}{an object of class \code{\link{moranI}}.}
 
-  \item{type}{}
+  \item{type}{character; the type of plotting to use. See
+  \code{\link{plot.default}}.}
 
-  \item{...}{}
+  \item{xlab}{the label for the x-axis of the plot.}
+
+  \item{ylab}{the label for the y-axis of the plot.}
+
+  \item{...}{additional arguments passed to
+  \code{\link{plot}}.}
 }
 \value{
 A plot on the current device
 }
 \description{
-A plot of Moran's I versus time
+A plot of Moran's I versus time.
 }
 \author{
 Gavin

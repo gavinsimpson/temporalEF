@@ -131,10 +131,13 @@
 }
 ##' @title Plot Moran's I statistics for temporal eigenfunctions
 ##'
-##' @description A plot of Moran's I versus time
-##' @param x an object of class \code{\link{moranI}}
-##' @param type
-##' @param ...
+##' @description A plot of Moran's I versus time.
+##' @param x an object of class \code{\link{moranI}}.
+##' @param type character; the type of plotting to use. See
+##' \code{\link{plot.default}}.
+##' @param xlab the label for the x-axis of the plot.
+##' @param ylab the label for the y-axis of the plot.
+##' @param ... additional arguments passed to \code{\link{plot}}.
 ##' @return A plot on the current device
 ##' @author Gavin
 `plot.moranI` <- function(x, type = "b", xlab = "Eigenfunctions",
