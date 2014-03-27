@@ -1,9 +1,10 @@
-##' Build an asymmetric link matrix
+##' @title Build an asymmetric link matrix
 ##'
 ##' @param tp numeric vector of sorted time points
 ##' @param link0 logical; should the link from t[0] be included?
 ##' @param dimnames logical; should dimnames be attached to the link
 ##' matrix?
+##'
 ##' @return binary matrix of links between time points. The object is
 ##' a square asymmetric matrix with \code{length(tp)} rows and columns.
 ##' Rows represent the \code{tp} time points, and columns are the
@@ -81,10 +82,11 @@
     w
 }
 
-##' A vector of weights based on the inverse of time duration between
-##' time points.
-##'
 ##' @title Weight vector for time points
+##'
+##' @description A vector of weights based on the inverse of time
+##' duration between time points.
+##'
 ##' @param tp numeric vector of sorted time points
 ##' @param FUN a function to apply
 ##' @param link0 logical; should the link from t[0] be included?
@@ -125,10 +127,11 @@
     w
 }
 
-##' A diagonal matrix of weights based on the inverse of time duration
-##' between time points.
-##'
 ##' @title Diagonal weight matrix for time points
+##'
+##' @description A diagonal matrix of weights based on the inverse
+##' of time duration between time points.
+##'
 ##' @param tp numeric vector of sorted time points
 ##' @param FUN a function to apply
 ##' @param link0 logical; should the link from t[0] be included?
