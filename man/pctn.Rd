@@ -61,4 +61,7 @@ tp <- seq_len(50)
 mod <- pctn(tp)
 mod
 }
+\author{
+Gavin L. Simpson
+}
 

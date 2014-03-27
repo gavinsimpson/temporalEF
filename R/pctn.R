@@ -1,7 +1,8 @@
-##' Principal coordinates of temporal neighbours
+##' @title Principal coordinates of temporal neighbours
 ##'
-##' Computes the classic PCNM by the principal coordinate analysis of
-##' a truncated distance matrix, but for a one-dimensional process.
+##' @description Computes the classic PCNM by the principal coordinate
+##' analysis of a truncated distance matrix, but for a one-dimensional
+##' process.
 ##'
 ##' @param x an R object. For \code{pctn} currently only a sorted
 ##' vector of time points.
@@ -25,6 +26,8 @@
 ##' object of class \code{"dist"} or a square symmetric matrix that can
 ##' be coerced to one. Arguments can be passed to \code{distfun} via
 ##' \ldots.
+##'
+##' @author Gavin L. Simpson
 ##'
 ##' @examples
 ##' tp <- seq_len(50)
@@ -112,7 +115,7 @@
     out
 }
 
-##' Plot PCTN eigenfunctions
+##' @title Plot PCTN eigenfunctions
 ##'
 ##' @param x an object of class \code{"pctn"}
 ##' @param pages numeric; the number of pages over which to spread
@@ -127,6 +130,8 @@
 ##' @seealso \code{\link{pctn}} for creating PCTN objects
 ##'
 ##' @keywords hplot
+##'
+##' @author Gavin L. Simpson
 ##'
 ##' @examples
 ##' tp <- seq_len(50)

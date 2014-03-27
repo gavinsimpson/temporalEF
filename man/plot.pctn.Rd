@@ -32,6 +32,9 @@ tp <- seq_len(50)
 mod <- pctn(tp)
 plot(mod, pages = 2)
 }
+\author{
+Gavin L. Simpson
+}
 \seealso{
 \code{\link{pctn}} for creating PCTN objects
 }
