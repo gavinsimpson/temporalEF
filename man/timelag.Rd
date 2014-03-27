@@ -46,6 +46,6 @@ tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
 head(tla[[1]])
 }
 \author{
-Gavin
+Gavin L. Simpson
 }
 

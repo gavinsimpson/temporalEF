@@ -21,7 +21,7 @@
 ##'
 ##' @rdname timelag
 ##'
-##' @author Gavin
+##' @author Gavin L. Simpson
 ##'
 ##' @export
 ##'
@@ -39,8 +39,6 @@
 ##' ## time lag analysis
 ##' tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
 ##' head(tla[[1]])
-
-
 `timelag` <- function(x, ...)
     UseMethod("timelag", x)
 
