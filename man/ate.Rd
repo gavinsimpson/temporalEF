@@ -60,4 +60,7 @@ dimension.
 tp <- seq_len(10)
 ate(tp)
 }
+\author{
+Gavin L. Simpson
+}
 

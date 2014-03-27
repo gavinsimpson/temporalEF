@@ -27,6 +27,8 @@
 ##'
 ##' @importFrom vegan scores eigenvals
 ##'
+##' @author Gavin L. Simpson
+##'
 ##' @export
 ##'
 ##' @examples
@@ -136,6 +138,8 @@
 ##' @seealso \code{\link{ate}} for creating ATE objects
 ##'
 ##' @keywords hplot
+##'
+##' @author Gavin L. Simpson
 ##'
 ##' @examples
 ##' tp <- seq_len(50)
