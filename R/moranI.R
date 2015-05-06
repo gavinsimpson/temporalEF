@@ -43,6 +43,8 @@
                          test = c("none", "parametric", "permutation"),
                          alternative = c("two.sided", "greater", "less"),
                          nperm = 999) {
+    ## Implementation based on equations in Gittleman & Kot (1990) Systematic
+    ## Zoology 39(3):227--241
     funI <- function(ybar, W, n) {
         num <- sum(W * (ybar %o% ybar))
         den <- sum(ybar^2)
