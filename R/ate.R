@@ -33,7 +33,9 @@
 ##'
 ##' @examples
 ##' tp <- seq_len(10)
-##' ate(tp)
+##' tefs <- ate(tp)
+##' tefs.I <- moranI(tefs)
+##' plot(tefs.I)
 
 `ate` <- function(x, ...) {
     UseMethod("ate")
