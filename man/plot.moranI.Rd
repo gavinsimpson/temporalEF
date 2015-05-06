@@ -4,11 +4,14 @@
 \alias{plot.moranI}
 \title{Plot Moran's I statistics for temporal eigenfunctions}
 \usage{
-\method{plot}{moranI}(x, type = "b", xlab = "Eigenfunctions",
-  ylab = "Moran's I", ...)
+\method{plot}{moranI}(x, alpha = 0.05, type = "b",
+  xlab = "Eigenfunctions", ylab = "Moran's I", pch = 21, bg = "red",
+  col = "black", ...)
 }
 \arguments{
 \item{x}{an object of class \code{\link{moranI}}.}
+
+\item{alpha}{numeric; level of significance}
 
 \item{type}{character; the type of plotting to use. See
 \code{\link{plot.default}}.}
@@ -16,6 +19,12 @@
 \item{xlab}{the label for the x-axis of the plot.}
 
 \item{ylab}{the label for the y-axis of the plot.}
+
+\item{pch}{the plotting character to use}
+
+\item{bg}{fill colour of points}
+
+\item{col}{border colour of points}
 
 \item{...}{additional arguments passed to \code{\link{plot}}.}
 }
