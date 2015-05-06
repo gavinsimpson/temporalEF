@@ -45,8 +45,7 @@
 
 ##' @rdname pctn
 ##'
-##' @method pctn default
-##' @S3method pctn default
+##' @export
 `pctn.default` <- function(x, threshold, distfun = dist, ...) {
     tol <- sqrt(.Machine$double.eps)
     distfun <- match.fun(distfun, ...)
@@ -79,8 +78,7 @@
 
 ##' @rdname pctn
 ##'
-##' @method print pctn
-##' @S3method print pctn
+##' @export
 ##' @param digits numeric; number of digits to display in output.
 `print.pctn` <- function(x, digits = 3, ...) {
     cat("\n")
@@ -96,8 +94,7 @@
 ##' @param choices numeric; vector indicating which eigenfunctions
 ##' to return.
 ##'
-##' @method scores pctn
-##' @S3method scores pctn
+##' @export
 `scores.pctn` <- function(x, choices, ...) {
     if(missing(choices)) {
         choices <- seq_len(ncol(x$vectors))
@@ -107,8 +104,7 @@
 
 ##' @rdname pctn
 ##'
-##' @method eigenvals pctn
-##' @S3method eigenvals pctn
+##' @export
 `eigenvals.pctn` <- function(x, ...) {
     out <- x$lambda
     class(out) <- "eigenvals"
@@ -138,8 +134,7 @@
 ##' mod <- pctn(tp)
 ##' plot(mod, pages = 2)
 ##'
-##' @method plot pctn
-##' @S3method plot pctn
+##' @export
 ##'
 `plot.pctn` <- function(x, pages = 1, ylim, ylab = nams, xlab = "",
                         ask = FALSE, ...) {

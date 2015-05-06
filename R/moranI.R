@@ -19,8 +19,7 @@
 
 ##' @rdname moranI
 ##'
-##' @method moranI ate
-##' @S3method moranI ate
+##' @export
 `moranI.ate` <- function(x, ...) {
     v <- x$vectors
     n <- NROW(v)
@@ -145,8 +144,7 @@
 ##'
 ##' @author Gavin L. Simpson
 ##'
-##' @S3method plot moranI
-##' @method plot moranI
+##' @export
 `plot.moranI` <- function(x, type = "b", xlab = "Eigenfunctions",
                           ylab = "Moran's I", ...) {
     statistic <- x$statistic[,1]

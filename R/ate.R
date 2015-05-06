@@ -41,8 +41,7 @@
 
 ##' @rdname ate
 ##'
-##' @method ate default
-##' @S3method ate default
+##' @export
 `ate.default` <- function(x, N, weight = FALSE, FUN = NULL,
                           link0 = TRUE, ...) {
     if(missing(N))
@@ -87,8 +86,7 @@
 
 ##' @rdname ate
 ##'
-##' @method print ate
-##' @S3method print ate
+##' @export
 ##' @param digits numeric; number of digits to display in output.
 `print.ate` <- function(x, digits = 3, ...) {
     cat("\n")
@@ -104,8 +102,7 @@
 ##' @param choices numeric; vector indicating which eigenfunctions
 ##' to return.
 ##'
-##' @method scores ate
-##' @S3method scores ate
+##' @export
 `scores.ate` <- function(x, choices, ...) {
     if(missing(choices)) {
         choices <- seq_len(ncol(x$vectors))
@@ -115,8 +112,7 @@
 
 ##' @rdname ate
 ##'
-##' @method eigenvals ate
-##' @S3method eigenvals ate
+##' @export
 `eigenvals.ate` <- function(x, ...) {
     out <- x$lambda
     class(out) <- "eigenvals"
@@ -146,8 +142,7 @@
 ##' mod <- ate(tp)
 ##' plot(mod, pages = 2)
 ##'
-##' @method plot ate
-##' @S3method plot ate
+##' @export
 ##'
 `plot.ate` <- function(x, pages = 1, ylim, ylab = nams, xlab = "",
                        ask = FALSE, ...) {

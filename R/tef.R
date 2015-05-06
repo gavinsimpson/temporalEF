@@ -39,8 +39,7 @@
 
 ##' @rdname tef
 ##'
-##' @method tef default
-##' @S3method tef default
+##' @export
 `tef.default` <- function(x, index, method = c("ate", "aem", "pctn", "pcnm"),
                           ordination = c("rda"), ...) {
     method <- match.arg(method)

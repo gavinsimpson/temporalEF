@@ -44,8 +44,7 @@
 
 ##' @rdname timelag
 ##'
-##' @method timelag dist
-##' @S3method timelag dist
+##' @export
 `timelag.dist` <- function(x, ...) {
     x <- as.matrix(x)
     lmax <- nrow(x) - 1
@@ -73,8 +72,7 @@
 ##'
 ##' @author Gavin L. Simpson
 ##'
-##' @method plot timelagAnalysis
-##' @S3method plot timelagAnalysis
+##' @export
 ##'
 ##' @examples
 ##' ## load analogue for Abernethy data set & distance()
@@ -90,7 +88,6 @@
 ##' ## time lag analysis
 ##' tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
 ##' plot(tla, pch = 19)
-
 `plot.timelagAnalysis` <- function(x, ...) {
     dat <- unclass(x[[1]])
     plot(Distance ~ sqrt(Lag), dat, ...)
