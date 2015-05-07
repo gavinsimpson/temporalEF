@@ -46,8 +46,13 @@
 ##' @export
 `ate.default` <- function(x, N, weight = FALSE, FUN = NULL,
                           link0 = TRUE, ...) {
+    ## check we have at least 2 time points
+    lenx <- length(x)
+    if (lenx < 2) {
+        stop("At least two time points are required for ATE.")
+    }
     if(missing(N))
-        N <- length(x)
+        N <- lenx
     if(!link0)
         N <- N-1
     ## create the links matrix, store twice, once for links & once
@@ -68,12 +73,12 @@
     eps <- sqrt(.Machine$double.eps)
     k <- SVD$d > eps
     lambda <- SVD$d[k]^2 / N
-    vectors <- SVD$u[, k]
+    vectors <- SVD$u[, k, drop = FALSE]
     ## normalize the AETs
     vectors <- sweep(vectors, 2, sqrt(colSums(vectors^2)), "/")
     ## add some names
     names(lambda) <- colnames(vectors) <- paste("EF", seq_along(lambda),
-                                            sep = "")
+                                                sep = "")
     rownames(vectors) <-
         if(is.null(tnams <- names(x))) {
             paste("T", seq_len(nrow(vectors)), sep = "")
@@ -109,7 +114,7 @@
     if(missing(choices)) {
         choices <- seq_len(ncol(x$vectors))
     }
-    x$vectors[, choices]
+    x$vectors[, choices, drop = FALSE]
 }
 
 ##' @rdname ate
