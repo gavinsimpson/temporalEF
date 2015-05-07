@@ -9,7 +9,8 @@ Imports:
     vegan,
     permute (>= 0.7-8)
 Suggests:
-    analogue
+    analogue,
+    testthat
 Author: Gavin L. Simpson
 Authors@R: person(given = c("Gavin", "L."), family = "Simpson",
     role = c("aut","cre"), email = "ucfagls@gmail.com")
