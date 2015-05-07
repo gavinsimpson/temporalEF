@@ -96,6 +96,8 @@
 ##' @param choices numeric; vector indicating which eigenfunctions
 ##' to return.
 ##'
+##' @importFrom vegan scores
+##'
 ##' @export
 `scores.pctn` <- function(x, choices, ...) {
     if(missing(choices)) {
@@ -105,6 +107,8 @@
 }
 
 ##' @rdname pctn
+##'
+##' @importFrom vegan eigenvals
 ##'
 ##' @export
 `eigenvals.pctn` <- function(x, ...) {
