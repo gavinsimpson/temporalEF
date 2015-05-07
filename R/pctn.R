@@ -34,8 +34,6 @@
 ##' mod <- pctn(tp)
 ##' mod
 ##'
-##' @importFrom vegan spantree
-##'
 ##' @rdname pctn
 ##' @export
 
@@ -44,6 +42,8 @@
 }
 
 ##' @rdname pctn
+##'
+##' @importFrom vegan spantree
 ##'
 ##' @export
 `pctn.default` <- function(x, threshold, distfun = dist, ...) {
@@ -62,8 +62,10 @@
     pcnm <- cmdscale(dij, k = length(x) - 1, eig = TRUE)
     want <- pcnm$eig > tol
     retval <- list(vectors = pcnm$points[, seq_len(sum(want))],
-                   lambda = pcnm$eig[want], threshold = threshold,
-                   tp = x, FUN = distfun)
+                   tp = x,
+                   lambda = pcnm$eig[want],
+                   threshold = threshold,
+                   FUN = distfun)
     ## need to add dimnames to objects
     names(retval$lambda) <- colnames(retval$vectors) <-
         paste("EF", seq_along(retval$lambda), sep = "")
