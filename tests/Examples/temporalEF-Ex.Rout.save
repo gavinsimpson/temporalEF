@@ -1,6 +1,6 @@
 
-R version 3.0.1 RC (2013-05-11 r62732) -- "Good Sport"
-Copyright (C) 2013 The R Foundation for Statistical Computing
+R version 3.2.0 Patched (2015-05-04 r68320) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
 Platform: x86_64-unknown-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -36,14 +36,9 @@ Type 'q()' to quit R.
 > ### ** Examples
 > 
 > tp <- seq_len(10)
-> ate(tp)
-
-Asymmetric Temporal Eigenfunctions
-
-No. of Eigenfunctions: 9
-Eigenvalues:
-   EF1    EF2    EF3    EF4    EF5    EF6    EF7    EF8    EF9 
-1.0216 0.2618 0.1213 0.0724 0.0500 0.0382 0.0315 0.0276 0.0256 
+> tefs <- ate(tp)
+> tefs.I <- moranI(tefs)
+> plot(tefs.I)
 > 
 > 
 > 
@@ -75,6 +70,63 @@ t9   1  1  1  1  1  1  1  1  1  0
 t10  1  1  1  1  1  1  1  1  1  1
 attr(,"class")
 [1] "linkMatrix" "matrix"    
+attr(,"link0")
+[1] TRUE
+> 
+> 
+> 
+> cleanEx()
+> nameEx("makeWeightMat")
+> ### * makeWeightMat
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: makeWeightMat
+> ### Title: Diagonal weight matrix for time points
+> ### Aliases: makeWeightMat
+> ### Keywords: utilities
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(10)
+> makeWeightMat(tp)
+   l0 l1 l2 l3 l4 l5 l6 l7 l8 l9
+l0  1  0  0  0  0  0  0  0  0  0
+l1  0  1  0  0  0  0  0  0  0  0
+l2  0  0  1  0  0  0  0  0  0  0
+l3  0  0  0  1  0  0  0  0  0  0
+l4  0  0  0  0  1  0  0  0  0  0
+l5  0  0  0  0  0  1  0  0  0  0
+l6  0  0  0  0  0  0  1  0  0  0
+l7  0  0  0  0  0  0  0  1  0  0
+l8  0  0  0  0  0  0  0  0  1  0
+l9  0  0  0  0  0  0  0  0  0  1
+attr(,"class")
+[1] "weightMat" "matrix"   
+> 
+> 
+> 
+> cleanEx()
+> nameEx("makeWeightVec")
+> ### * makeWeightVec
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: makeWeightVec
+> ### Title: Weight vector for time points
+> ### Aliases: makeWeightVec
+> ### Keywords: utilities
+> 
+> ### ** Examples
+> 
+> tp <- seq_len(10)
+> makeWeightVec(tp)
+l0 l1 l2 l3 l4 l5 l6 l7 l8 l9 
+ 1  1  1  1  1  1  1  1  1  1 
+attr(,"class")
+[1] "weightVec" "numeric"  
+attr(,"link0")
+[1] TRUE
 > 
 > 
 > 
@@ -85,7 +137,7 @@ attr(,"class")
 > flush(stderr()); flush(stdout())
 > 
 > ### Name: makeWeights
-> ### Title: Build a temporal weighting matrix
+> ### Title: Temporal weight matrix
 > ### Aliases: makeWeights
 > ### Keywords: utilities
 > 
@@ -106,6 +158,8 @@ t9   9  8  7  6  5  4  3  2  1  0
 t10 10  9  8  7  6  5  4  3  2  1
 attr(,"class")
 [1] "weightMatrix" "matrix"      
+attr(,"link0")
+[1] TRUE
 > 
 > 
 > 
@@ -193,11 +247,9 @@ Eigenvalues:
 Loading required package: analogue
 Loading required package: vegan
 Loading required package: permute
-This is vegan 2.1-29
-Loading required package: princurve
 Loading required package: lattice
-Loading required package: rgl
-This is analogue 0.11-4
+This is vegan 2.2-1
+This is analogue 0.16-0
 > 
 > ## Load Abernethy Forest data set
 > data("abernethy", package = "analogue")
@@ -214,8 +266,8 @@ This is analogue 0.11-4
 > 
 > cleanEx()
 
-detaching ‘package:analogue’, ‘package:rgl’, ‘package:lattice’,
-  ‘package:princurve’, ‘package:vegan’, ‘package:permute’
+detaching ‘package:analogue’, ‘package:vegan’, ‘package:lattice’,
+  ‘package:permute’
 
 > nameEx("timelag")
 > ### * timelag
@@ -233,11 +285,9 @@ detaching ‘package:analogue’, ‘package:rgl’, ‘package:lattice’,
 Loading required package: analogue
 Loading required package: vegan
 Loading required package: permute
-This is vegan 2.1-29
-Loading required package: princurve
 Loading required package: lattice
-Loading required package: rgl
-This is analogue 0.11-4
+This is vegan 2.2-1
+This is analogue 0.16-0
 > 
 > ## Load Abernethy Forest data set
 > data("abernethy", package = "analogue")
@@ -263,7 +313,7 @@ This is analogue 0.11-4
 > ###
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  3.952 0.071 4.144 0.001 0.002 
+Time elapsed:  2.142 0.029 2.17 0 0 
 > grDevices::dev.off()
 null device 
           1 
