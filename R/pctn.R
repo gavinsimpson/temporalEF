@@ -44,6 +44,7 @@
 ##' @rdname pctn
 ##'
 ##' @importFrom vegan spantree
+##' @importFrom stats cmdscale dist
 ##'
 ##' @export
 `pctn.default` <- function(x, threshold, distfun = dist, ...) {
