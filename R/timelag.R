@@ -27,7 +27,7 @@
 ##'
 ##' @examples
 ##' ## load analogue for Abernethy data set & distance()
-##' require("analogue")
+##' if (require("analogue")) {
 ##'
 ##' ## Load Abernethy Forest data set
 ##' data("abernethy", package = "analogue")
@@ -37,8 +37,10 @@
 ##' abernethy2 <- abernethy[, -(37:38)]
 ##'
 ##' ## time lag analysis
-##' tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
+##' dij <- as.dist(distance(abernethy2, method = "chord"))
+##' tla <- timelag(dij)
 ##' head(tla[[1]])
+##' }
 `timelag` <- function(x, ...)
     UseMethod("timelag", x)
 
@@ -76,7 +78,7 @@
 ##'
 ##' @examples
 ##' ## load analogue for Abernethy data set & distance()
-##' require("analogue")
+##' if (require("analogue")) {
 ##'
 ##' ## Load Abernethy Forest data set
 ##' data("abernethy", package = "analogue")
@@ -86,8 +88,10 @@
 ##' abernethy2 <- abernethy[, -(37:38)]
 ##'
 ##' ## time lag analysis
-##' tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
+##' dij <- as.dist(distance(abernethy2, method = "chord"))
+##' tla <- timelag(dij)
 ##' plot(tla, pch = 19)
+##' }
 `plot.timelagAnalysis` <- function(x, ...) {
     dat <- unclass(x[[1]])
     plot(Distance ~ sqrt(Lag), dat, ...)
