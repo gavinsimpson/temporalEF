@@ -137,7 +137,7 @@
         } else {
             pval <- pnorm(obsI, mean = expI, sd = sdev)
         }
-    } else if (isTRUE(permute)) {
+    } else {
         alternative <- if (isTRUE(all.equal(alternative, "two.sided"))) {
             c("less","greater")[(obsI > expI) + 1]
         }
