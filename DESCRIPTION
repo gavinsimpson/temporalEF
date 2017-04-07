@@ -22,3 +22,4 @@ Description: Build sets of (asymmetric) one-dimensional, temporal eigenfunctions
     principal coordinates of temporal neighbour matrices (PCTNs), based on the concept of
     principal coordinates of neighbour matrices.
 License: GPL-2
+RoxygenNote: 6.0.1
