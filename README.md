@@ -4,7 +4,7 @@
 [![CRAN version](http://www.r-pkg.org/badges/version/temporalEF)](http://cran.rstudio.com/web/packages/temporalEF/index.html) [![](http://cranlogs.r-pkg.org/badges/grand-total/temporalEF)](http://cran.rstudio.com/web/packages/temporalEF/index.html)
 
 #### Build status
-[![Build Status](https://travis-ci.org/gavinsimpson/temporalEF.svg?branch=master)](https://travis-ci.org/gavinsimpson/temporalEF)  [![Build status](https://ci.appveyor.com/api/projects/status/hc8dbxrim2nj3c1i/branch/master)](https://ci.appveyor.com/project/gavinsimpson/temporalEF/branch/master)
+[![Build Status](https://travis-ci.org/gavinsimpson/temporalEF.svg?branch=master)](https://travis-ci.org/gavinsimpson/temporalEF)  [![Build status](https://ci.appveyor.com/api/projects/status/hc8dbxrim2nj3c1i/branch/master)](https://ci.appveyor.com/project/gavinsimpson/temporalEF/branch/master)  [![codecov](https://codecov.io/gh/gavinsimpson/temporalEF/branch/master/graph/badge.svg)](https://codecov.io/gh/gavinsimpson/temporalEF)
 
 ## What is temporalEF?
 
