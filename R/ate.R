@@ -96,12 +96,13 @@
 ##' @export
 ##' @param digits numeric; number of digits to display in output.
 `print.ate` <- function(x, digits = 3, ...) {
+    ev <- eigenvals(x)
     cat("\n")
     writeLines(strwrap("Asymmetric Temporal Eigenfunctions"))
     cat("\n")
-    writeLines(paste("No. of Eigenfunctions:", length(x$lambda)))
+    writeLines(paste("No. of Eigenfunctions:", length(ev)))
     writeLines("Eigenvalues:")
-    print(x$lambda, digits = digits)
+    print(ev, digits = digits)
 }
 
 ##' @rdname ate
@@ -111,10 +112,11 @@
 ##'
 ##' @export
 `scores.ate` <- function(x, choices, ...) {
+    efs <- eigenfuns(x)
     if(missing(choices)) {
-        choices <- seq_len(ncol(x$vectors))
+        choices <- seq_len(ncol(efs))
     }
-    x$vectors[, choices, drop = FALSE]
+    efs[, choices, drop = FALSE]
 }
 
 ##' @rdname ate
@@ -153,18 +155,20 @@
 ##'
 `plot.ate` <- function(x, pages = 1, ylim, ylab = nams, xlab = "",
                        ask = FALSE, ...) {
-    len <- length(x$lambda)
+    ev <- eigenvals(x)
+    len <- length(ev)
     np <- ceiling(len / pages)
     prc <- n2mfrow(np)
     op <- par(mar = c(3,4,1,1), ask = ask)
     on.exit(par(op))
     on.exit(layout(1), add = TRUE)
     layout(matrix(seq_len(prod(prc)), ncol = prc[2], nrow = prc[1]))
-    nams <- colnames(x$vectors)
+    efs <- eigenfuns(x)
+    nams <- colnames(efs)
     if(missing(ylim))
-        ylim <- range(x$vectors)
+        ylim <- range(efs)
     for(i in seq_len(len)) {
-        plot(x$tp, x$vectors[,i], type = "l", ylab = ylab[i], xlab = xlab,
+        plot(x$tp, efs[,i], type = "l", ylab = ylab[i], xlab = xlab,
              ylim = ylim, ...)
     }
     invisible(x)
