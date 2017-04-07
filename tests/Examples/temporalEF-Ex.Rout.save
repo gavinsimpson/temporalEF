@@ -1,7 +1,7 @@
 
-R version 3.2.0 Patched (2015-05-04 r68320) -- "Full of Ingredients"
-Copyright (C) 2015 The R Foundation for Statistical Computing
-Platform: x86_64-unknown-linux-gnu (64-bit)
+R version 3.3.3 Patched (2017-03-15 r72392) -- "Another Canoe"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -31,7 +31,7 @@ Type 'q()' to quit R.
 > 
 > ### Name: ate
 > ### Title: Asymmetric temporal eigenfunctions
-> ### Aliases: ate ate.default eigenvals.ate print.ate scores.ate
+> ### Aliases: ate ate.default print.ate scores.ate eigenvals.ate
 > 
 > ### ** Examples
 > 
@@ -171,7 +171,7 @@ attr(,"link0")
 > 
 > ### Name: pctn
 > ### Title: Principal coordinates of temporal neighbours
-> ### Aliases: eigenvals.pctn pctn pctn.default print.pctn scores.pctn
+> ### Aliases: pctn pctn.default print.pctn scores.pctn eigenvals.pctn
 > 
 > ### ** Examples
 > 
@@ -189,6 +189,7 @@ Eigenvalues:
 17.06 16.29 15.52 14.69 13.86 12.99 12.12 11.21 10.31  9.38  8.47  7.54  6.63 
  EF27  EF28  EF29  EF30  EF31  EF32  EF33 
  5.70  4.80  3.90  3.02  2.15  1.32  0.50 
+> 
 > 
 > 
 > 
@@ -211,6 +212,7 @@ Eigenvalues:
 > 
 > 
 > 
+> 
 > cleanEx()
 > nameEx("plot.pctn")
 > ### * plot.pctn
@@ -230,6 +232,7 @@ Eigenvalues:
 > 
 > 
 > 
+> 
 > cleanEx()
 > nameEx("plot.timelagAnalysis")
 > ### * plot.timelagAnalysis
@@ -243,24 +246,26 @@ Eigenvalues:
 > ### ** Examples
 > 
 > ## load analogue for Abernethy data set & distance()
-> require("analogue")
+> if (require("analogue")) {
++ 
++ ## Load Abernethy Forest data set
++ data("abernethy", package = "analogue")
++ ## Load Abernethy Forest data set
++ 
++ ## Remove the Depth and Age variables
++ abernethy2 <- abernethy[, -(37:38)]
++ 
++ ## time lag analysis
++ dij <- as.dist(distance(abernethy2, method = "chord"))
++ tla <- timelag(dij)
++ plot(tla, pch = 19)
++ }
 Loading required package: analogue
 Loading required package: vegan
 Loading required package: permute
 Loading required package: lattice
-This is vegan 2.2-1
-This is analogue 0.16-0
-> 
-> ## Load Abernethy Forest data set
-> data("abernethy", package = "analogue")
-> ## Load Abernethy Forest data set
-> 
-> ## Remove the Depth and Age variables
-> abernethy2 <- abernethy[, -(37:38)]
-> 
-> ## time lag analysis
-> tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
-> plot(tla, pch = 19)
+This is vegan 2.5-0
+analogue version 0.17-0
 > 
 > 
 > 
@@ -281,24 +286,26 @@ detaching ‘package:analogue’, ‘package:vegan’, ‘package:lattice’,
 > ### ** Examples
 > 
 > ## load analogue for Abernethy data set & distance()
-> require("analogue")
+> if (require("analogue")) {
++ 
++ ## Load Abernethy Forest data set
++ data("abernethy", package = "analogue")
++ ## Load Abernethy Forest data set
++ 
++ ## Remove the Depth and Age variables
++ abernethy2 <- abernethy[, -(37:38)]
++ 
++ ## time lag analysis
++ dij <- as.dist(distance(abernethy2, method = "chord"))
++ tla <- timelag(dij)
++ head(tla[[1]])
++ }
 Loading required package: analogue
 Loading required package: vegan
 Loading required package: permute
 Loading required package: lattice
-This is vegan 2.2-1
-This is analogue 0.16-0
-> 
-> ## Load Abernethy Forest data set
-> data("abernethy", package = "analogue")
-> ## Load Abernethy Forest data set
-> 
-> ## Remove the Depth and Age variables
-> abernethy2 <- abernethy[, -(37:38)]
-> 
-> ## time lag analysis
-> tla <- timelag(as.dist(distance(abernethy2, method = "chord")))
-> head(tla[[1]])
+This is vegan 2.5-0
+analogue version 0.17-0
   Lag Distance
 1   1 2.439201
 2   1 2.230325
@@ -313,7 +320,7 @@ This is analogue 0.16-0
 > ###
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  2.142 0.029 2.17 0 0 
+Time elapsed:  2.071 0.031 2.111 0 0 
 > grDevices::dev.off()
 null device 
           1 
