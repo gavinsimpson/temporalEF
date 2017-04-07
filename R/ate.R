@@ -1,6 +1,6 @@
-##' @title Asymmetric temporal eigenfunctions
+##' Asymmetric temporal eigenfunctions
 ##'
-##' @description Generate a set of asymmetric temporal eigenfunctions
+##' Generate a set of asymmetric temporal eigenfunctions
 ##'
 ##' @details The asymmetric eigenvector map (AEM) is a recently proposed
 ##' method for describing orthongonal spatial functions for use in
@@ -128,7 +128,9 @@
     out
 }
 
-##' @title Plot asymmetric temporal eigenfunctions
+##' Plot asymmetric temporal eigenfunctions
+##'
+##' A multi-panel layout showing the calculated tempoeral eigenfunctions.
 ##'
 ##' @param x an object of class \code{"ate"}
 ##' @param pages numeric; the number of pages over which to spread

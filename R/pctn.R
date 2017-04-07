@@ -1,6 +1,6 @@
-##' @title Principal coordinates of temporal neighbours
+##' Principal coordinates of temporal neighbours
 ##'
-##' @description Computes the classic PCNM by the principal coordinate
+##' Computes the classic PCNM by the principal coordinate
 ##' analysis of a truncated distance matrix, but for a one-dimensional
 ##' process.
 ##'
@@ -118,7 +118,9 @@
     out
 }
 
-##' @title Plot PCTN eigenfunctions
+##' Plot PCTN eigenfunctions
+##'
+##' A multi-panel layout showing the calculated tempoeral eigenfunctions.
 ##'
 ##' @param x an object of class \code{"pctn"}
 ##' @param pages numeric; the number of pages over which to spread

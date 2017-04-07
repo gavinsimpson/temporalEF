@@ -1,4 +1,6 @@
-##' @title Build an asymmetric link matrix
+##' Build an asymmetric link matrix
+##'
+##' Creates an asymmetric link matrix from provided time points.
 ##'
 ##' @param tp numeric vector of sorted time points
 ##' @param link0 logical; should the link from t[0] be included?

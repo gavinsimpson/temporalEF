@@ -1,4 +1,6 @@
-##' @title Moran's I for temporal eigenfunctions
+##' Moran's I for temporal eigenfunctions
+##'
+##' Calculate Moran's I for tempoeral eigenfunctions and assess significant of Moran's I values via a parametric test that assumes asymptotic normality or a permutation test.
 ##'
 ##' @param x an R object of class \code{"ate"}.
 ##' @param ... additional arguments passed to methods.
@@ -162,9 +164,10 @@
 
     list(statistic = obsI, p.value = pval)
 }
-##' @title Plot Moran's I statistics for temporal eigenfunctions
+##' Plot Moran's I statistics for temporal eigenfunctions
 ##'
-##' @description A plot of Moran's I versus time.
+##' A plot of Moran's I versus time.
+##'
 ##' @param x an object of class \code{\link{moranI}}.
 ##' @param alpha numeric; level of significance
 ##' @param type character; the type of plotting to use. See
