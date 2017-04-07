@@ -35,7 +35,7 @@
     }
     alternative <- match.arg(alternative)
     stat <- apply(v, 2, calcMoranI, w = w, permute = permute, ...)
-    stat <- do.call(rbind, stat)
+    stat <- do.call("rbind", stat)
 
     ## expected value of Moran's I
     expI <- -1 / (n - 1)
@@ -46,6 +46,7 @@
 }
 
 ##' @export
+##' @importFrom stats symnum
 `print.moranI` <- function(x,
                            digits = max(3, getOption("digits") - 2),
                            eps.Pvalue = .Machine$double.eps,
@@ -76,6 +77,7 @@
     invisible(x)
 }
 
+##' @importFrom stats pnorm sd
 `calcMoranI` <- function(y, w, scale = FALSE, norm = FALSE,
                          permute = FALSE,
                          alternative = "two.sided",
