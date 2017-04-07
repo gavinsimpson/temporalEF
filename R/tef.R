@@ -44,11 +44,13 @@
                           ordination = c("rda"), ...) {
     method <- match.arg(method)
     ## allow the standard name AEM for ATE
-    if (identical(method, "aem"))
+    if (identical(method, "aem")) {
         method <- "ate"
+    }
     ## allow the standard name AEM for ATE
-    if (identical(method, "pcnm"))
+    if (identical(method, "pcnm")) {
         method <- "pctn"
+    }
 
     fun <- switch(method,
                   ate = ate,
