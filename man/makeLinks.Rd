@@ -20,6 +20,9 @@ a square asymmetric matrix with \code{length(tp)} rows and columns.
 Rows represent the \code{tp} time points, and columns are the
 network links between timepoints.
 }
+\description{
+Creates an asymmetric link matrix from provided time points.
+}
 \examples{
 tp <- seq_len(10)
 makeLinks(tp)

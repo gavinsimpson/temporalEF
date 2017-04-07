@@ -24,6 +24,9 @@ the plots of the individual eigenfunction}
 \value{
 A plot on the currently active device
 }
+\description{
+A multi-panel layout showing the calculated tempoeral eigenfunctions.
+}
 \examples{
 tp <- seq_len(50)
 mod <- ate(tp)

@@ -24,6 +24,9 @@ moranI(x, ...)
 \value{
 Numeric vector of Moran's I statistics
 }
+\description{
+Calculate Moran's I for tempoeral eigenfunctions and assess significant of Moran's I values via a parametric test that assumes asymptotic normality or a permutation test.
+}
 \author{
 Gavin L. Simpson
 }
