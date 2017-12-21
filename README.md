@@ -25,6 +25,14 @@ or constrained analysis of principal coordinates (CAP) to decompose a
 species data matrix into independent patterns of temporal variation or
 trends.
 
+## Installation
+
+The simplest way to install **temporalEF** is to use the **devtools** package
+
+```r
+devtools::install_github("gavinsimpson/temporalEF")
+```
+
 ## Licence
 
 **temporalEF** is made available under the [GNU GPL version 2
